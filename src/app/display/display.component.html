@@ -1,1 +1,56 @@
 <p>display works!</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Policy</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Insurance Policies Of Customer</h1>
+      <br />
+      <input type="number" #txt placeholder="Enter Customer ID"/>
+      <button (click)="getById(txt.value)" class="btn btn-info ml-3">Enter Id</button>
+      <br/>
+      <br/>
+      
+      <div *ngIf="showHtml">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Policy Holder Id</th>
+            <th>Policy Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of Policy">
+            <!-- <td>{{ p.Id }}</td>
+            <td>{{ p.policyId }}</td> -->
+            <td>{{ p.policyHolderId }}</td>
+            <td>{{ p.policyName }}</td>
+            <td>{{ p.startDate }}</td>
+            <td>{{ p.endDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <br />
+      <span>{{ error }}</span>
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js (if needed)
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+  </body>
+</html>

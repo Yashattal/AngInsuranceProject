@@ -1,3 +1,5 @@
+<p>custname works!</p>
+<p>display works!</p>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,29 +14,37 @@
   </head>
   <body>
     <div class="container">
-      <h1>Insurance Policies</h1>
-      <p>Home Works!</p>
+      <h1>Insurance Policies Of Customer</h1>
       <br />
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>PolicyId</th>
-            <th>Policy Name</th>
-            <th>Coverage Amount</th>
-            <th>Premium Amount</th>
-            <th>CategoryId</th>
-          </tr>
-        </thead>
+
+      <input [(ngModel)]="textInput" placeholder="Enter Customer Name" />
+      <button  (click)="getByName()" class="btn btn-info ml-3">Enter Name </button>
+      
+        <!-- <button (click)="getById(txt.value)" class="btn btn-info ml-3">Enter Id</button> -->
+        <div *ngIf="showHtml">
+        <table class="table table-striped">
+        
+            <thead>
+            <tr>
+                <th>Policy Holder Id</th>
+                <th>Customer Name</th>
+                <th>Policy Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+            </thead>
+        
         <tbody>
           <tr *ngFor="let p of Policy">
-            <td>{{ p.policyId }}</td>
+            <td>{{ p.policyHolderId }}</td>
+            <td>{{ p.name }}</td>
             <td>{{ p.policyName }}</td>
-            <td>{{ p.coverageAmount }}</td>
-            <td>{{ p.premiumAmount }}</td>
-            <td>{{ p.num }}</td>
+            <td>{{ p.startDate }}</td>
+            <td>{{ p.endDate }}</td>
           </tr>
         </tbody>
       </table>
+      </div>
       <br />
       <span>{{ error }}</span>
     </div>

@@ -1,0 +1,59 @@
+
+<p>display works!</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Policy</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Insurance Policy Details</h1>
+      <br />
+      <input [(ngModel)]="intValue" size="30" placeholder="Enter Policy Id to Get Policy Details"/>
+      <button  (click)="getById()" class="btn btn-info ml-3">Enter Name </button>
+      <br/>
+      <br/>
+      
+      <div *ngIf="showHtml">
+      <table class="table table-striped">
+        <thead>
+            <tr>
+              <th>PolicyId</th>
+              <th>Policy Name</th>
+              <th>Coverage Amount</th>
+              <th>Premium Amount</th>
+              <th>CategoryId</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td>{{ policy.policyId }}</td>
+              <td>{{ policy.policyName }}</td>
+              <td>{{ policy.coverageAmount }}</td>
+              <td>{{ policy.premiumAmount }}</td>
+              <td>{{ policy.num }}</td>
+            <!-- <tr *ngFor="let p of policy">
+              <td>{{ p.policyId }}</td>
+              <td>{{ p.policyName }}</td>
+              <td>{{ p.coverageAmount }}</td>
+              <td>{{ p.premiumAmount }}</td>
+              <td>{{ p.num }}</td>
+            </tr> -->
+          </tbody>
+      </table>
+
+      <div>
+              
+      </div>
+    </div>
+      <br />
+      <span>{{ error }}</span>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractHttpComm, Policy } from 'HttpComm';
+import { AbstractHttpComm, Policy, PolicySold } from 'HttpComm';
 
 @Component({
   selector: 'app-root',

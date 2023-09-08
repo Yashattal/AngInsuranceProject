@@ -8,12 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DisplayComponent } from './display/display.component';
 import { AbstractHttpComm, HttpComm } from 'HttpComm';
+import { CustnameComponent } from './custname/custname.component';
+import { PolidComponent } from './polid/polid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DisplayComponent
+    DisplayComponent,
+    CustnameComponent,
+    PolidComponent
   ],
   imports: [
     BrowserModule,
