@@ -10,6 +10,10 @@ import { DisplayComponent } from './display/display.component';
 import { AbstractHttpComm, HttpComm } from 'HttpComm';
 import { CustnameComponent } from './custname/custname.component';
 import { PolidComponent } from './polid/polid.component';
+import { UpdatecompComponent } from './updatecomp/updatecomp.component';
+import { OperationsComponent } from './operations/operations.component';
+import { MonthComponent } from './month/month.component';
+import { AddpolComponent } from './addpol/addpol.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { PolidComponent } from './polid/polid.component';
     HomeComponent,
     DisplayComponent,
     CustnameComponent,
-    PolidComponent
+    PolidComponent,
+    UpdatecompComponent,
+    OperationsComponent,
+    MonthComponent,
+    AddpolComponent
   ],
   imports: [
     BrowserModule,

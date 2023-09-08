@@ -1,0 +1,15 @@
+<a routerLink="/operations">Update customer details</a>
+
+
+<table>
+<tbody>
+<tr *ngFor="let c of customer">
+<td>{{c.policyHolderId}}</td>
+<td>{{c.name}}</td>
+<td>{{c.email}}</td>
+<td>{{c.address}}</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<span>{{error}}</span>

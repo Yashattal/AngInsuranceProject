@@ -18,16 +18,24 @@ export class phold_psold{
 }
 
 
+export class policyHolder{
+    constructor(public policyHolderId:number,public name:string,
+        public dob:Date,public gender:string,public contact:string,public email:string,public address:string ){}
+}
+
 export abstract class AbstractHttpComm{
     abstract GetPolicies():Observable<Policy[]>;
     abstract GetCustomerById(policyHolderId: number):Observable<PolicySold[]>;
     abstract GetCustByName(Name:string):Observable<phold_psold[]>;
     abstract GetpolById(policyId:number):Observable<Policy>;
+    abstract UpdateCustDetails(customer:policyHolder):Observable<Object>;
+    abstract GetpolicybyMonth(month:number):Observable<phold_psold[]>;
+    abstract Addpolicy(pol:Policy):Observable<Object>;
 }
 
 @Injectable({providedIn:'root'})
 export class HttpComm extends AbstractHttpComm{
-    url = 'http://localhost:5223';
+    url = 'http://localhost:5269';
     constructor(private client:HttpClient){ super();}
 
     override GetPolicies():Observable<Policy[]>{
@@ -55,6 +63,31 @@ export class HttpComm extends AbstractHttpComm{
         let path = `${this.url}/policies/${policyId}`;
         const headers = {headers:new HttpHeaders({observe:'response'})};
         var result = this.client.get<Policy>(path,headers); 
+        return result;
+    }
+
+    override UpdateCustDetails(customer:policyHolder):Observable<Object>{
+        let path = `${this.url}/update`;
+       // const headers = {headers:new HttpHeaders({'content-type':'application/json', observe:'response'})};
+       // var result = this.client.put(path,customer,headers); 
+
+        const head = new HttpHeaders({'content-type':'application/json'});
+        var result = this.client.put(path,customer,{headers:head,observe:'response'}); 
+       
+        return result;
+    }
+
+    override GetpolicybyMonth(month:number):Observable<phold_psold[]>{
+        let path = `${this.url}/policies/month/${month}`;
+        const headers = {headers:new HttpHeaders({observe:'response'})};
+        var result = this.client.get<phold_psold[]>(path,headers); 
+        return result;
+    }
+
+    override Addpolicy(pol:Policy):Observable<Object>{
+        let path = `${this.url}/admin/policies`;
+        const head = new HttpHeaders({'content-type':'application/json'});
+        var result = this.client.post(path,pol,{headers:head,observe:'response'}); 
         return result;
     }
 }

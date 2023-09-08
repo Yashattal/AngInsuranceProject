@@ -1,0 +1,32 @@
+
+<!-- <a routerLink="/Home">Go to Display page</a> -->
+<br/>
+<div>
+<label>PolicyId</label>
+<br/>
+<input type="number" [(ngModel)]="pol.policyId"/>
+<br/>
+<label>PolicyName</label>
+<br/>
+<!-- ngModel is directive which we used for two way binding -->
+<input type="text" [(ngModel)]="pol.policyName"/>
+<br/>
+<label>CoverageAmount</label>
+<br/>
+<input type="text" [(ngModel)]="pol.coverageAmount"/>
+<br/>
+<label>premiumAmount</label>
+<br/>
+<input type="text" [(ngModel)]="pol.premiumAmount"/>
+<br/>
+<label>CategoryID</label>
+<br/>
+<input type="text" [(ngModel)]="pol.num"/>
+<br/>
+
+
+<button (click)="add()">Add Record</button>
+</div>
+<!-- json pipe -->
+<h2>{{pol | json}}</h2> 
+<span style="color:red">{{statusDetails}}</span>

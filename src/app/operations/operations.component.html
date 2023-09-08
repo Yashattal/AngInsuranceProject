@@ -1,0 +1,27 @@
+<a routerLink="/Home">Go to Display page</a>
+<br/>
+<div>
+<label>PolicyHolderId</label>
+<br/>
+<input type="number" [(ngModel)]="customer.policyHolderId"/>
+<br/>
+<label>Contact</label>
+<br/>
+<!-- ngModel is directive which we used for two way binding -->
+<input type="text" [(ngModel)]="customer.contact"/>
+<br/>
+<label>Email</label>
+<br/>
+<input type="text" [(ngModel)]="customer.email"/>
+<br/>
+<label>Address</label>
+<br/>
+<input type="text" [(ngModel)]="customer.address"/>
+<br/>
+
+
+<button (click)="update()">Update Record</button>
+</div>
+<!-- json pipe -->
+<h2>{{customer | json}}</h2> 
+<span style="color:red">{{statusDetails}}</span>
