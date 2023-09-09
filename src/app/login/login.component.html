@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+</head>
+
+<body>
+
+   <div class="login-container">
+
+        <img src="assets\Insupolicy.jpeg" height="100" width="200" alt="insurance Icon" class="pic">
+
+        <h2>Login</h2>
+
+        <form>
+
+            <div class="input-container">
+
+                <label for="username">Username</label>
+
+                <input type="text" #uid name="username" required>
+
+            </div>
+
+            <div class="input-container">
+
+                <label for="password">Password</label>
+
+                <input type="password" #pwd name="password" required>
+
+            </div>
+             
+            <br/>
+            <button class="btn btn-primary btn-block"
+
+                (click)="getToken(uid.value,pwd.value)">Login</button>
+
+            <!-- <button type="submit">Login</button> -->
+
+        </form>
+
+    </div>
+
+ 
+
+    

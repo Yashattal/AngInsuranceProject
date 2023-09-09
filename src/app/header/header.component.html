@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">InsuranceCompany</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" *ngIf="!isLoggedIn" >
+            <a class="nav-link" routerLink="login">Login</a>
+            </li>
+          <!-- <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li> -->
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="Home">GetPolicies</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="Display">PolicyByCustomerId</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="Custname">PolicyByCustName</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="polid">PolicyID</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="updatecomp">UpdateCustDetails</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="month">PolicyByMonth</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="addpol">AddPolicy</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" (click)="logout()">Logout</a>
+            </li>
+          
+        </ul>
+       
+        <!-- <form class="d-flex"> -->
+          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <!-- <button class="btn btn-outline-info" type="Login">Login</button> -->
+          <!-- <a routerLink="/home" class="btn btn-outline-info">Login</a>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
