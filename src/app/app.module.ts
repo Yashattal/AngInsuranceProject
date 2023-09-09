@@ -14,6 +14,9 @@ import { UpdatecompComponent } from './updatecomp/updatecomp.component';
 import { OperationsComponent } from './operations/operations.component';
 import { MonthComponent } from './month/month.component';
 import { AddpolComponent } from './addpol/addpol.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { RestrictedAccessComponent } from './restricted-access/restricted-access.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { AddpolComponent } from './addpol/addpol.component';
     UpdatecompComponent,
     OperationsComponent,
     MonthComponent,
-    AddpolComponent
+    AddpolComponent,
+    LoginComponent,
+    HeaderComponent,
+    RestrictedAccessComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,11 @@ import { UpdatecompComponent } from './updatecomp/updatecomp.component';
 import { OperationsComponent } from './operations/operations.component';
 import { MonthComponent } from './month/month.component';
 import { AddpolComponent } from './addpol/addpol.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { RestrictedAccessComponent } from './restricted-access/restricted-access.component';
+
+import { AuthGuard } from './AuthGuard';
 
 const routes: Routes = [
   {path:'Home',component:HomeComponent},
@@ -18,8 +23,21 @@ const routes: Routes = [
   {path:'updatecomp', component:UpdatecompComponent},
   {path:'operations', component:OperationsComponent},
   {path:'month', component:MonthComponent},
-  {path:'addpol',component:AddpolComponent}
-
+  // {path:'addpol',component:AddpolComponent},
+  {path:'login',component:LoginComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full' },
+  {path:'header',component:HeaderComponent},
+  {path:'restricted-access',component:RestrictedAccessComponent},
+  
+  {
+    path: 'addpol',
+    component: AddpolComponent,
+    canActivate: [AuthGuard] // Apply the AdminAuthGuard to protect this route
+  },
+  {
+    path: 'restricted-access',
+    component: RestrictedAccessComponent// Create this component to display an access denied message
+  }
 ];
 
 @NgModule({
