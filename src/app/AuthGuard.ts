@@ -30,10 +30,10 @@ export class AuthGuard implements CanActivate{
 
         // If not a Admin, redirect to a different page (e.g., access denied)
 
-        this.router.navigate(['/restricted-access']);
+       this.router.navigate(['/restricted-access']);
 
-        return false;
-
+       return false;
+        // return true;
       }
 
  

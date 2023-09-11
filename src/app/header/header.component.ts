@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   isLoggedIn: boolean=false;//string | null = "";
   loginrole: string | null = "";
+  imageUrl: string = '/assets/Ins1.jpg'; 
   constructor(private router: Router,){}
   ngOnInit(){
     this.isLoggedIn = sessionStorage.getItem('token')==null? false:true;

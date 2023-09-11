@@ -17,6 +17,9 @@ import { AddpolComponent } from './addpol/addpol.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { RestrictedAccessComponent } from './restricted-access/restricted-access.component';
+import { BarchartComponent } from './barchart/barchart.component';
+import { NgChartsModule } from 'ng2-charts';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { RestrictedAccessComponent } from './restricted-access/restricted-access
     AddpolComponent,
     LoginComponent,
     HeaderComponent,
-    RestrictedAccessComponent
+    RestrictedAccessComponent,
+    BarchartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    CanvasJSAngularChartsModule,
+    FormsModule,
+    
   ],
   providers: [{provide:AbstractHttpComm,useClass:HttpComm}],
   bootstrap: [AppComponent]

@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { RestrictedAccessComponent } from './restricted-access/restricted-access.component';
 
 import { AuthGuard } from './AuthGuard';
+import { BarchartComponent } from './barchart/barchart.component';
+// s
 
 const routes: Routes = [
   {path:'Home',component:HomeComponent},
@@ -25,9 +27,10 @@ const routes: Routes = [
   {path:'month', component:MonthComponent},
   // {path:'addpol',component:AddpolComponent},
   {path:'login',component:LoginComponent},
-  {path: '', redirectTo: 'login', pathMatch: 'full' },
+  //{path: '', redirectTo: 'login', pathMatch: 'full' },
   {path:'header',component:HeaderComponent},
   {path:'restricted-access',component:RestrictedAccessComponent},
+  {path:'barchart',component:BarchartComponent},
   
   {
     path: 'addpol',
@@ -38,6 +41,7 @@ const routes: Routes = [
     path: 'restricted-access',
     component: RestrictedAccessComponent// Create this component to display an access denied message
   }
+  // {path: 'barchart',component:BarchartComponent}
 ];
 
 @NgModule({

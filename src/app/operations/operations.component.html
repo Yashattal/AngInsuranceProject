@@ -1,6 +1,4 @@
 
-<a routerLink="/Home">Go to Display page</a>
-<br/>
 <div>
 <label>PolicyHolderId</label>
 <br/>
@@ -19,10 +17,10 @@
 <br/>
 <input type="text" [(ngModel)]="customer.address"/>
 <br/>
-
+<br/>
 
 <button (click)="update()">Update Record</button>
 </div>
 <!-- json pipe -->
-<h2>{{customer | json}}</h2> 
+<h4>{{customer | json}}</h4> 
 <span style="color:red">{{statusDetails}}</span>

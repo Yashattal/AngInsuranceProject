@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
+import { ChartData } from 'src/app/barchart/barchart.component';
 
 export class Policy{
     constructor(public policyId:number, public policyName:string, 
@@ -31,6 +32,7 @@ export abstract class AbstractHttpComm{
     abstract UpdateCustDetails(customer:policyHolder):Observable<Object>;
     abstract GetpolicybyMonth(month:number):Observable<phold_psold[]>;
     abstract Addpolicy(pol:Policy):Observable<Object>;
+    abstract Getpolsoldbymonth():Observable<ChartData[]>;
 }
 
 @Injectable({providedIn:'root'})
@@ -63,6 +65,12 @@ export class HttpComm extends AbstractHttpComm{
         let path = `${this.url}/policies/${policyId}`;
         const headers = {headers:new HttpHeaders({observe:'response'})};
         var result = this.client.get<Policy>(path,headers); 
+        return result;
+    }
+    override Getpolsoldbymonth():Observable<ChartData[]>{
+        let path = `${this.url}/soldbymonth`;
+        const headers = {headers:new HttpHeaders({observe:'response'})};
+        var result = this.client.get<ChartData[]>(path,headers); 
         return result;
     }
 
