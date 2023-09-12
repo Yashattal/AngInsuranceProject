@@ -21,7 +21,7 @@ export class BarchartComponent  {
     },
     animationEnabled: true,
     data: [{        
-      type: "area",
+      type: "pie",
       dataPoints: this.points
     }]
 };
