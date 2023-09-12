@@ -1,51 +1,96 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insurance Policy</title>
-    <!-- Include Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Insurance Policies</h1>
-      
-      <br />
-      <table class="table table-light table-bordered table-striped table-hover ">
-        <thead>
-          <tr class="table-info">
-            <th>PolicyId</th>
-            <th>Policy Name</th>
-            <th>Coverage Amount</th>
-            <th>Premium Amount</th>
-            <th>CategoryId</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let p of Policy">
-            <td>{{ p.policyId }}</td>
-            <td>{{ p.policyName }}</td>
-            <td>{{ p.coverageAmount }}</td>
-            <td>{{ p.premiumAmount }}</td>
-            <td>{{ p.num }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <br />
-      <span>{{ error }}</span>
-    </div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    <!-- Include Bootstrap JS and Popper.js (if needed)
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+
+* {
+  box-sizing: border-box;
+}
+
+ 
+
+.bg-image {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ 
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+ 
+
+<div class="bg-image">
+<!-- <img src="assets/Images/Ins3.webp" alt="Insurance Company" class="image"> -->
+</div>
+
+ 
+
+<div class="bg-text">
+<div class="container">
+<h1>Insurance Policies</h1>
+
+<br />
+<table class="table table-light table-bordered table-striped table-hover">
+<thead>
+<tr class="table-info">
+<th>PolicyId</th>
+<th>Policy Name</th>
+<th>Coverage Amount</th>
+<th>Premium Amount</th>
+<th>CategoryId</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let p of Policy">
+<td>{{ p.policyId }}</td>
+<td>{{ p.policyName }}</td>
+<td>{{ p.coverageAmount }}</td>
+<td>{{ p.premiumAmount }}</td>
+<td>{{ p.num }}</td>
+</tr>
+</tbody>
+</table>
+<br />
+<span>{{ error }}</span>
+</div>
+</div>
+
+ 
+
 </body>
-</html> -->
-  </body>
 </html>

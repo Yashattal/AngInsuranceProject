@@ -1,164 +1,134 @@
-
 <!DOCTYPE html>
-
 <html>
 
-<style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body,
+        html {
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    .login-container {
 
-  display: flex;
 
-  justify-content: center;
+        .bg-img {
+            /* The image used */
+            background-image: url("assets/Ins4.webp");
 
-  align-items: center;
 
-  height: 100vh;
 
-  background-color: #f2f2f2; /* Background color of the page */
+            min-height: 650px;
 
-}
 
- 
 
-/* Login box styling */
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
 
-.login-box {
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Background color of the page */
+        }
 
-  background-color: #fff; /* Background color of the login box */
 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
-  padding: 20px;
+        /* Login box styling */
+        .login-box {
+            background-color: #fff;
+            /* Background color of the login box */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            /* Adjust the width as needed */
+            text-align: center;
+        }
 
-  border-radius: 5px;
 
-  width: 300px; /* Adjust the width as needed */
 
-  text-align: center;
+        /* Heading style */
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            /* Text color */
+        }
 
-}
 
- 
 
-/* Heading style */
+        /* Form group styles */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+            font-size: 20px;
+        }
 
-h2 {
 
-  margin-bottom: 20px;
 
-  color: #333; /* Text color */
+        /* Input field styles */
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            /* Border color */
+            border-radius: 3px;
+            font-size: 14px;
+            /* Font size */
+        }
 
-}
 
- 
 
-/* Form group styles */
+        /* Login button styles */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            /* Button color */
+            color: #fff;
+            /* Text color */
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-.form-group {
 
-  margin-bottom: 15px;
 
-  text-align: left;
-
-  font-size: 20px;
-
-}
-
- 
-
-/* Input field styles */
-
-input[type="text"],
-
-input[type="password"] {
-
-  width: 90%;
-
-  padding: 10px;
-
-  border: 1px solid #ccc; /* Border color */
-
-  border-radius: 3px;
-
-  font-size: 14px; /* Font size */
-
-}
-
- 
-
-/* Login button styles */
-
-button {
-
-  width: 100%;
-
-  padding: 10px;
-
-  background-color: #007bff; /* Button color */
-
-  color: #fff; /* Text color */
-
-  border: none;
-
-  border-radius: 3px;
-
-  font-size: 16px;
-
-  cursor: pointer;
-
-}
-
- 
-
-button:hover {
-
-  background-color: #0056b3; /* Button color on hover */
-
-}
-
-</style>
+        button:hover {
+            background-color: #0056b3;
+            /* Button color on hover */
+        }
+    </style>
+</head>
 
 <body>
-
-<div class="login-container">
-
-  <div class="login-box">
-
-    <h2>Login</h2>
+    <div class="bg-img">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Login</h2>
 
     <form>
-
       <div class="form-group">
-
         <label for="username">Username</label>
-
         <input type="text" #uid name="username" placeholder="Enter your username" required>
-
       </div>
-
       <div class="form-group">
-
         <label for="password">Password</label>
-
         <input type="password" #pwd   name="password" placeholder="Enter your password" required>
-        
       </div>
-
       <button class="btn btn-primary btn-block"
-
                 (click)="getToken(uid.value,pwd.value)">Login</button>
-
-           
-
     </form>
-
-  </div>
-
-</div>
-
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
-
-     

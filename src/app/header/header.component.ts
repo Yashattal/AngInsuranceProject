@@ -18,6 +18,6 @@ export class HeaderComponent {
   ngAfterViewChanged(){}
   logout(){
     sessionStorage.clear();
-    this.router.navigate([""]);
+    this.router.navigate(["/login"]);
   }
 }

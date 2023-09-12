@@ -17,11 +17,11 @@ export class BarchartComponent  {
   points:object[]=[];
   chartOptions = {
     title:{
-      text: "Angular Pie Chart"  
+      text: "Insurance Policies Area Chart"  
     },
     animationEnabled: true,
     data: [{        
-      type: "pie",
+      type: "area",
       dataPoints: this.points
     }]
 };

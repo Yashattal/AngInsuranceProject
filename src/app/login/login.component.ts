@@ -34,7 +34,7 @@ export class LoginComponent {
 
         if(sessionStorage.getItem("role") == "User" || sessionStorage.getItem("role")=="Admin") {
 
-          this.router.navigate(['/Display']);
+          this.router.navigate(['/update']);
 
         }
 

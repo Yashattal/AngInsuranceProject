@@ -16,7 +16,7 @@
       <h1>Insurance Policies By CustomerId</h1>
       <br />
       <input type="number" #txt placeholder="Enter Customer ID"/>
-      <button (click)="getById(txt.value)" class="btn btn-info ml-3">Enter Id</button>
+      <button (click)="getById(txt.value)" class="btn btn-info ml-3">Enter</button>
       <br/>
       <br/>
       
@@ -37,7 +37,7 @@
             <td>{{ p.policyHolderId }}</td>
             <td>{{ p.policyName }}</td>
             <td>{{ p.startDate | date:'dd-MMMM-yyyy' }}</td>
-            <td>{{ p.endDate | date:'shortDate'}}</td>
+            <td>{{ p.endDate | date:'dd-MMMM-yyyy'}}</td>
           </tr>
         </tbody>
       </table>

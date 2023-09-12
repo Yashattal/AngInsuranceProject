@@ -1,26 +1,26 @@
-
-<div>
+<br />
+<div class="container-fluid">
 <label>PolicyHolderId</label>
-<br/>
-<input type="number" [(ngModel)]="customer.policyHolderId"/>
-<br/>
+<br />
+<input type="number" [(ngModel)]="customer.policyHolderId" />
+<br />
 <label>Contact</label>
-<br/>
-<!-- ngModel is directive which we used for two way binding -->
-<input type="text" [(ngModel)]="customer.contact"/>
-<br/>
+<br />
+<!-- ngModel is directive which we use for two way binding -->
+<input type="text" [(ngModel)]="customer.contact" />
+<br />
 <label>Email</label>
-<br/>
-<input type="text" [(ngModel)]="customer.email"/>
-<br/>
+<br />
+<input type="text" [(ngModel)]="customer.email" />
+<br />
 <label>Address</label>
-<br/>
-<input type="text" [(ngModel)]="customer.address"/>
-<br/>
-<br/>
-
-<button (click)="update()">Update Record</button>
+<br />
+<input type="text" [(ngModel)]="customer.address" />
+<br />
+<br />
+<button (click)="update()" class="btn btn-primary">Update Record</button>
 </div>
+<br />
 <!-- json pipe -->
-<h4>{{customer | json}}</h4> 
+<!-- <h4>{{customer | json}}</h4>  -->
 <span style="color:red">{{statusDetails}}</span>
